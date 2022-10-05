@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import styled from 'styled-components';
 
-function App() {
+const StyledDiv = styled.div`
+  width: 100%;
+  text-align: center;
+  font-size: 0.875rem;
+  padding: 1rem 0;
+  background-color: lightgrey;
+  opacity: 0.75;
+`;
+
+const Footer = () => {
+  const scrollUp = () => {
+    document.getElementById('page-top').scrollIntoView(true);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledDiv className="footer">
+      Copyright &copy; Girl + Environment 2022
+    </StyledDiv>
   );
-}
+};
 
-export default App;
+export default Footer;
