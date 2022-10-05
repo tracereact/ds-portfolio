@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Qwitcher+Grypen&display=swap');
+
+:root {
+  /* Global variables */
+  --hf-background: #1b1b1b00;
+  --hf-background-color: rgb(27, 27, 27);
+  --primary-color: #f8efd4;
+  --secondary-color: rgb(222, 222, 228);
+  --tertiary-color: rgb(218, 0, 0);
+  --purple: rgb(114, 58, 255);
+  --page-min-width: 10rem;
+  --page-width: 80vw;
+  --page-max-width: 70rem;
+  --title-size: 2.5rem;
+  --text-size: 1rem;
+
+  /* Global Settings */
+  font-family: 'Qwitcher Grypen', cursive;
+  font-family: 'EB Garamond', serif;
+}
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+/* Link to area on page */
+.anchor {
+  display: block;
+  position: relative;
+  top: -10rem;
+  visibility: hidden;
+}

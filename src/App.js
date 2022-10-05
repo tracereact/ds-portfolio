@@ -1,25 +1,22 @@
 import React from 'react';
+import './styles/global.css';
 import styled from 'styled-components';
+import Footer from './components/footer';
 
-const StyledDiv = styled.div`
-  width: 100%;
-  text-align: center;
-  font-size: 0.875rem;
-  padding: 1rem 0;
-  background-color: lightgrey;
-  opacity: 0.75;
+const StyledApp = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 `;
 
-const Footer = () => {
-  const scrollUp = () => {
-    document.getElementById('page-top').scrollIntoView(true);
-  };
-
+const App = () => {
   return (
-    <StyledDiv className="footer">
-      Copyright &copy; Girl + Environment 2022
-    </StyledDiv>
+    <StyledApp className="App">
+      Header goes here
+      <Footer />
+    </StyledApp>
   );
 };
 
-export default Footer;
+export default App;
