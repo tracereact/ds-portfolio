@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/global.css';
 import styled from 'styled-components';
+import Welcome from './components/welcome';
 import Footer from './components/footer';
 
 const StyledApp = styled.div`
@@ -13,6 +14,7 @@ const StyledApp = styled.div`
 const App = () => {
   return (
     <StyledApp className="App">
+      <Welcome />
       Header goes here
       <Footer />
     </StyledApp>
