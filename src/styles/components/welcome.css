@@ -7,3 +7,43 @@
   justify-content: center;
   /* overflow: hidden; */
 }
+
+#fade {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.55rem;
+  opacity: 0;
+
+  border: 2px solid red;
+}
+
+#fade.in {
+  animation: fade-in 2s forwards ease-in-out;
+  animation-delay: 1s;
+}
+
+#fade.out {
+  animation: fade-out 2s backwards ease-in-out;
+  animation-delay: 1s;
+}
+
+@keyframes fade-in {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
