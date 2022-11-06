@@ -1,5 +1,8 @@
 FROM node:19.0.0-bullseye
 
+# Customize terminal prompt
+RUN echo "PROMPT_DIRTRIM=1" >> /root/.bashrc
+
 # Global installs
 RUN npm i -g prettier
 RUN npm i -g serve
@@ -31,7 +34,7 @@ EXPOSE 3000
 
 # USER client
 
-RUN mkdir node_modules/.cache
-RUN chown node:node node_modules/.cache
+# RUN mkdir node_modules/.cache
+# RUN chown node:node node_modules/.cache
 
 CMD ["npm", "run", "devStart"]
