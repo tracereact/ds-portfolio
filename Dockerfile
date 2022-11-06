@@ -16,7 +16,7 @@ WORKDIR /usr/src/ds-portfolio
 # where available (npm@5+)
 COPY package*.json /usr/src/ds-portfolio/
 
-RUN npm install
+RUN npm ic
 # If you are building your code for production
 # RUN npm i --only=production
 # RUN npm i --omit=dev
