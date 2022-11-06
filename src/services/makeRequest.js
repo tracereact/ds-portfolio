@@ -2,6 +2,7 @@ const formData = new FormData();
 
 const makeRequest = (
   req,
+  params = {},
   options = {
     method: 'GET',
     body: formData,
@@ -9,7 +10,7 @@ const makeRequest = (
   }
 ) => {
   fetch(
-    `http://api.airvisual.com/v2/${req}?key=${process.env.REACT_APP_IQAIR_API_KEY}`,
+    `https://api.airvisual.com/v2${req}${new URLSearchParams(params)}`,
     options
   )
     .then((res) => {
