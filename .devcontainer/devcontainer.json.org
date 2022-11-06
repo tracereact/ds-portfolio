@@ -1,0 +1,11 @@
+{
+  "name": "asset-facet-client",
+  "dockerFile": "../Dockerfile",
+  "appPort": [3000],
+  "runArgs": ["-u", "node"],
+  "settings": {
+    "workbench.colorTheme": "Horizon Bright Bold"
+  },
+  "postCreateCommand": "npm install",
+  "extensions": ["esbenp.prettier-vscode", "alexandernanberg.horizon-theme-vscode"]
+}

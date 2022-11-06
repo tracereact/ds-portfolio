@@ -26,8 +26,7 @@
         "unnamedComponents": "arrow-function"
       }
     ],
-    "comma-dangle": ["error", "only-multiline"],
-    "no-trailing-spaces": "error"
+    "comma-dangle": ["error", "only-multiline"]
   },
   "settings": {
     "import/resolver": {

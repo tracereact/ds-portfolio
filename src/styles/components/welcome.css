@@ -2,33 +2,31 @@
 
 .container {
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
   /* overflow: hidden; */
 }
 
+/* Initial Welcome message */
 #fade {
   font-size: 2rem;
   font-weight: bold;
   letter-spacing: 0.55rem;
   opacity: 0;
 }
-
 #fade.done {
   opacity: 1;
 }
-
 #fade.in-out {
-  animation: fade-in-out 4.5s forwards ease-in-out;
+  animation: fade-in-out 3s forwards ease-in-out;
   animation-delay: 1s;
 }
-
 #fade.in {
   animation: fade-in 3s forwards ease;
   animation-delay: 1s;
 }
-
 @keyframes fade-in-out {
   0% {
     transform: translateX(-100px);
@@ -46,7 +44,6 @@
     transform: translateX(100px);
   }
 }
-
 @keyframes fade-in {
   0% {
     scale: 0.75;
@@ -55,4 +52,13 @@
     opacity: 1;
     scale: 1;
   }
+}
+
+/* Arrow animations */
+#arrows {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+
+  border: 2px solid red;
 }

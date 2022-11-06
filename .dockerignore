@@ -1,0 +1,14 @@
+# Environment variables
+.env
+
+# Development artifacts
+# public
+# src
+# docker-build.sh
+# Dockerfile
+# README.md
+node_modules
+
+# Ignore files
+# .gitignore
+# .dockerignore

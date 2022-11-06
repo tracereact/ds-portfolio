@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  # Main client
+  client:
+    container_name: ds-portfolio
+    build: .
+    volumes:
+      - .:/usr/src/ds-portfolio
+    ports:
+      - ${CLIENT_HOST_PORT}:3000
+    # stdin_open: true
+    restart: always
+    command: npm run devStart
