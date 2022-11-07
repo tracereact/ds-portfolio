@@ -4,8 +4,8 @@ FROM node:19.0.0-bullseye
 RUN echo "PROMPT_DIRTRIM=1" >> /root/.bashrc
 
 # Global installs
-RUN npm i -g prettier
-RUN npm i -g serve
+# RUN npm i -g prettier
+# RUN npm i -g serve
 
 # Create app directory
 RUN mkdir -p /usr/src/ds-portfolio
@@ -14,9 +14,9 @@ WORKDIR /usr/src/ds-portfolio
 # Install client dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
-COPY package*.json /usr/src/ds-portfolio/
+COPY package*.json /usr/src/ds-portfolio
 
-RUN npm ic
+# RUN npm install
 # If you are building your code for production
 # RUN npm i --only=production
 # RUN npm i --omit=dev
