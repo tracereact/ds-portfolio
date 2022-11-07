@@ -3,7 +3,7 @@ import './styles/global.css';
 import styled from 'styled-components';
 import Welcome from './components/Welcome';
 import Footer from './components/Footer';
-import GeorgiaPollution from './components/GeorgiaPollution';
+import Body from './components/Body';
 
 const StyledApp = styled.div`
   display: flex;
@@ -17,7 +17,7 @@ const App = () => {
     <StyledApp className="App">
       <Welcome />
       Header goes here
-      <GeorgiaPollution />
+      <Body />
       <Footer />
     </StyledApp>
   );
