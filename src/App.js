@@ -1,8 +1,9 @@
 import React from 'react';
 import './styles/global.css';
 import styled from 'styled-components';
-import Welcome from './components/welcome';
-import Footer from './components/footer';
+import Welcome from './components/Welcome';
+import Footer from './components/Footer';
+import GeorgiaPollution from './components/GeorgiaPollution';
 
 const StyledApp = styled.div`
   display: flex;
@@ -16,6 +17,7 @@ const App = () => {
     <StyledApp className="App">
       <Welcome />
       Header goes here
+      <GeorgiaPollution />
       <Footer />
     </StyledApp>
   );

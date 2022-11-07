@@ -1,7 +1,11 @@
 import makeRequest from './makeRequest';
 
-const getCountries = () => {
-  return makeRequest('/countries');
+const getGeorgiaData = () => {
+  return makeRequest('/city', {
+    country: 'USA',
+    state: 'Georgia',
+    city: 'Atlanta',
+  });
 };
 
-export default getCountries;
+export default getGeorgiaData;

@@ -1,27 +1,21 @@
-const formData = new FormData();
-
-const makeRequest = (
+const makeRequest = async (
   req,
   params = {},
   options = {
     method: 'GET',
-    body: formData,
     redirect: 'follow',
   }
 ) => {
-  fetch(
-    `https://api.airvisual.com/v2${req}${new URLSearchParams(params)}`,
-    options
-  )
-    .then((res) => {
-      return res.text();
-    })
-    .then((res) => {
-      return console.log(res);
-    })
-    .catch((err) => {
-      return Promise.reject(err?.response?.data?.message ?? 'Error');
-    });
+  try {
+    const res = await fetch(
+      `https://api.airvisual.com/v2${req}?${new URLSearchParams(params)}`,
+      options
+    );
+    return res.json();
+  } catch (err) {
+    console.error('Promise error: ', err);
+    return Promise.reject(err ?? 'Promise rejection: Error');
+  }
 };
 
 export default makeRequest;
