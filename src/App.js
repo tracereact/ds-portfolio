@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Welcome from './components/Welcome';
 import Footer from './components/Footer';
 import Body from './components/Body';
+import Header from './components/Header';
 
 const StyledApp = styled.div`
   display: flex;
@@ -16,7 +17,7 @@ const App = () => {
   return (
     <StyledApp className="App">
       <Welcome />
-      Header goes here
+      <Header />
       <Body />
       <Footer />
     </StyledApp>
