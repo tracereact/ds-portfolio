@@ -18,7 +18,7 @@ const makeRequest = async (
       return await res.json();
     }
 
-    return console.error('API Error: ', res.body.message);
+    return console.error(`HTTP-Error: ${res.status}`);
   } catch (err) {
     console.error('Promise error: ', err);
     return Promise.reject(err ?? 'Promise rejection: Error');
