@@ -8,10 +8,17 @@ const makeRequest = async (
 ) => {
   try {
     const res = await fetch(
-      `https://api.airvisual.com/v2${req}?${new URLSearchParams(params)}`,
+      `https://api.airvisual.com/v2${req}?key=${
+        process.env.REACT_APP_IQAIR_API_KEY
+      }&${new URLSearchParams(params)}`,
       options
     );
-    return res.json();
+
+    if (res.ok) {
+      return await res.json();
+    }
+
+    return console.error('API Error: ', res.body.message);
   } catch (err) {
     console.error('Promise error: ', err);
     return Promise.reject(err ?? 'Promise rejection: Error');

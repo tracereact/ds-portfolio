@@ -1,11 +1,13 @@
 import makeRequest from './makeRequest';
 
 const getGeorgiaData = () => {
-  return makeRequest('/city', {
+  const params = {
     country: 'USA',
     state: 'Georgia',
     city: 'Atlanta',
-  });
+  };
+
+  return makeRequest('/city', params);
 };
 
 export default getGeorgiaData;

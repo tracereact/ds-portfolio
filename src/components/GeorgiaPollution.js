@@ -13,10 +13,12 @@ const GeorgiaPollution = () => {
     return <p>{error}</p>;
   }
 
+  console.log(`Georgia Data: ${JSON.stringify(georgiaData)}`);
+
   return (
     <div>
       <ul>
-        <li>Pollution {georgiaData.current.pollution}</li>
+        <li>aqicn: {georgiaData?.data?.current?.pollution?.aqicn}</li>
       </ul>
     </div>
   );
